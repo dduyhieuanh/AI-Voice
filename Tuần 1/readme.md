@@ -15,3 +15,8 @@ Các bước hoạt động của Backend:
 4. **Xử Lý Logic:** Thực hiện các phép toán và quy trình theo yêu cầu của ứng dụng.
 5. **Tạo Phản Hồi:** Tạo phản hồi dựa trên kết quả xử lý và gửi lại cho giao diện người dùng.
 6. **Quản Lý Tải:** Sử dụng kỹ thuật như phân bổ tải và bộ nhớ đệm để xử lý nhiều yêu cầu đồng thời và tối ưu hóa hiệu suất.
+
+# FastAPI
+
+## Khái niệm
+FastAPI là một framework web hiệu suất cao cho ngôn ngữ lập trình Python, chạy trên máy chủ web, được thiết kế để xây dựng các API nhanh chóng và mạnh mẽ. Nó kết hợp sức mạnh của Python với các tính năng hiện đại trong phát triển web để cung cấp hiệu suất tốt và tài liệu API tự động.
