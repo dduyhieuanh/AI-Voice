@@ -40,3 +40,61 @@ Speech Signal được dùng trong: voice detection, Voice verification, Speech-
 4. Mô hình hóa (HMM, DNN, Transformer)
 
 ### Digital Audio (Audio số)
+Audio số (Digital Audio) là âm thanh được biểu diễn dưới dạng dữ liệu số (0 và 1) thay vì tín hiệu liên tục như âm thanh analog.
+
+Âm thanh ngoài đời thực là sóng cơ học → micro chuyển thành tín hiệu điện analog → sau đó được chuyển đổi sang dạng số bằng bộ chuyển đổi **ADC (Analog-to-Digital Converter).**
+
+#### Bản chất vật lý:
+Âm thanh là **sóng cơ học lan truyền trong môi trường (không khí)**, đặc trưng bởi:
+
+* Tần số (Frequency – Hz) → quyết định cao độ
+* Biên độ (Amplitude) → quyết định độ to
+* Pha (Phase)
+#### Bản chất toán học:
+Audio số được tạo ra bằng 3 quá trình chính:
+1. Lấy mẫu (Sampling)
+2. Lượng tử hoá (Quantization)
+3. Mã hoá nhị phân (Encoding)
+
+#####  Sampling (Lấy mẫu):
+- Khái niệm: Là quá trình lấy các giá trị biên độ của sóng âm tại các thời điểm cách đều nhau.
+- Tần số lấy mẫu:
+* Đơn vị: Hz (số mẫu / giây)
+* 44.1 kHz → chuẩn CD
+* 48 kHz → chuẩn video
+* 96 kHz → audio chất lượng cao
+- Định lý Nyquist
+Tần số lấy mẫu phải ≥ 2 lần tần số cao nhất của tín hiệu\
+Ví dụ:\
+Tai người nghe tối đa ~20 kHz
+→ Cần sampling ≥ 40 kHz
+→ Vì vậy chuẩn 44.1 kHz được sử dụng trong CD.
+
+3. Quantization (Lượng tử hóa)
+Sau khi lấy mẫu, giá trị biên độ sẽ được làm tròn về một mức gần nhất.
+- Bit depth (Độ sâu bit)
+Cách tính số lượng tử: $Số mức = 2^{bit}$
+
+| Bit depth | Số mức        | Ứng dụng    |
+| --------- | ------------- | ----------- |
+| 8-bit     | 256 mức       | Âm thanh cũ |
+| 16-bit    | 65,536 mức    | CD          |
+| 24-bit    | ~16 triệu mức | Studio      |
+
+Bit depth càng cao → âm thanh càng mượt, ít nhiễu lượng tử.
+
+4. Encoding (Mã hoá):
+Mỗi mẫu sau khi lượng tử hóa được biểu diễn bằng chuỗi nhị phân.\
+Ví dụ:\
+16-bit → mỗi mẫu = 16 bit\
+44.1 kHz → 44,100 mẫu/giây
+
+5. Định dạng file audio số
+- Không nén (Lossless – giữ nguyên dữ liệu)
+* WAV
+* AIFF
+* FLAC
+- Nén mất dữ liệu (Lossy)
+* MP3
+* AAC
+* OGG
